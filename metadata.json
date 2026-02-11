@@ -1,0 +1,5 @@
+{
+  "name": "AI Vehicle Damage Detector",
+  "description": "An AI-powered tool to detect vehicle damage from uploaded images, assess severity, and estimate repair costs.",
+  "requestFramePermissions": []
+}

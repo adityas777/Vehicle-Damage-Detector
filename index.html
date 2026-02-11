@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Vehicle Damage Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#00A8E8',
+              'brand-secondary': '#007EA7',
+              'brand-dark': '#111827', // Darker background
+              'brand-light': '#F7FAFC',
+              'brand-gray': '#9CA3AF', // Softer gray
+              'severity-low': '#38A169',   // green-600
+              'severity-medium': '#DD6B20', // orange-600
+              'severity-high': '#E53E3E',   // red-600
+            },
+            boxShadow: {
+                // Enhanced glow effect - more intense and wider spread
+                'glow-primary': '0 0 25px 5px rgba(0, 168, 232, 0.7)',
+                'glow-primary-light': '0 0 15px 3px rgba(0, 168, 232, 0.5)',
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(theme(colors.gray.700/.5) 1px, transparent 1px), linear-gradient(90deg, theme(colors.gray.700/.5) 1px, transparent 1px)",
+              'radial-spotlight': "radial-gradient(circle, theme(colors.brand-primary/.15), transparent 70%)",
+            },
+            backgroundSize: {
+                'grid-pattern': '30px 30px',
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0c101a; /* Even darker base */
+        /* Enhanced studio light effect - more vibrant and covers more area */
+        background-image: radial-gradient(circle at center top, rgba(0, 168, 232, 0.25), transparent 60%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "jspdf": "https://esm.sh/jspdf@^4.1.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-dark text-brand-light">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
